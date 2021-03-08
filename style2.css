@@ -5,15 +5,17 @@ roboto main
 
 create header fixed color black 
 create Logo element pacifico white 
-sit nav in header for 3 buttons each gray with white font 615F5F
+sit nav in header for 1 buttons each gray with white font 615F5F
 
-create individual button elements 3
+create individual button elements 1
 
 use flexbox for header 
 
 Page background color green 606C38
 
 create intro element <h1></h1> white merriweather
+
+style search element inside right side color E9E7E7
 
 Create black recipe card element 
 
@@ -23,7 +25,6 @@ create sample card
  3. Recipe
  4.image 
 
-create black advice card element white merriweather
 
 create black footer 
 create name element inside the div 

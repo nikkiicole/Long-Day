@@ -128,17 +128,24 @@ Inline-style:
 
 ## Timeframes
 
-| Component               | Priority | Estimated Time | Time Invested | Actual Time |
-| ----------------------- | :------: | :------------: | :-----------: | :---------: |
-| Adding Form             |    H     |      3hrs      |               |             |
-| Working with API        |    H     |      5hrs      |               |             |
-| Working with HTML       |    H     |      4hrs      |               |             |
-| Working with Javascript |    H     |     20hrs      |               |             |
-| Working with CSS        |    H     |      8hrs      |               |             |
-| Debugging               |    H     |      3hrs      |               |             |
-| Editing                 |    H     |      4hrs      |               |             |
-| Testing                 |    H     |      3hrs      |               |             |
-| Total                   |    H     |     50hrs      |               |             |
+| Component                            | Priority | Estimated Time | Time Invested | Actual Time |
+| ------------------------------------ | :------: | :------------: | :-----------: | :---------: |
+| Adding Form                          |    H     |      3hrs      |               |             |
+| Working with API                     |    H     |      5hrs      |               |             |
+| Working with HTML                    |    H     |      4hrs      |               |             |
+| Setting up Javascript frame          |    H     |      2hrs      |               |
+| Appending items to the DOM           |    H     |      3hrs      |               |
+| Creating Functions                   |    H     |     3.5hrs     |               |
+| Organizing Loop Flow                 |    H     |      3hrs      |               |
+| Linking Second HTML Page             |    H     |     .5hrs      |
+| Linking Images                       |    H     |     1.5hrs     |
+| Creating items to be appended to DOM |    H     |      3hrs      |
+| Working with CSS Format              |    H     |      3hrs      |               |
+| Polishing Design                     |    M     |      3hrs      |               |             |
+| Debugging                            |    H     |      3hrs      |               |             |
+| Cleaning Code & Refactoring          |    M     |      4hrs      |               |             |
+| Testing                              |    H     |      3hrs      |               |             |
+| Total                                |    H     |    44.5hrs     |               |             |
 
 ## Code Snippet
 

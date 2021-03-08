@@ -1,4 +1,4 @@
-async function getBreeds() {
+async function getCocktails() {
   try {
     let response = await axios.get("https://www.thecocktaildb.com/api/json/v1/1/random.php");
     console.log(response.data);
@@ -6,4 +6,5 @@ async function getBreeds() {
       console.log(err);
     }
 }
-getBreeds()
+getCocktails()
+

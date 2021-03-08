@@ -1,12 +1,16 @@
-async function getCocktails() {
+
+https://www.thecocktaildb.com/api/json/v1/1/search.php?s=Mojito
+
+async function getCocktailSearch() {
   try {
-    let response = await axios.get("https://www.thecocktaildb.com/api/json/v1/1/random.php");
+    let response = await axios.get("https://www.thecocktaildb.com/api/json/v1/1/search.php?s=Mojito");
     console.log(response.data);
   }catch (err) {
       console.log(err);
     }
 }
-getCocktails()
+getCocktailSearch()
+
 
 //Connect all API's 
 //link pages 

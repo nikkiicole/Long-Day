@@ -1,3 +1,7 @@
+https://www.thecocktaildb.com/api/json/v1/1/random.php
+https://api.adviceslip.com/advice
+
+
 async function getCocktails() {
   try {
     let response = await axios.get("https://www.thecocktaildb.com/api/json/v1/1/random.php");
@@ -8,6 +12,15 @@ async function getCocktails() {
 }
 getCocktails()
 
+async function getAdviceSlips() {
+  try {
+    let response = await axios.get("https://api.adviceslip.com/advice");
+    console.log(response.data);
+  }catch (err) {
+      console.log(err);
+    }
+}
+getAdviceSlips()
 
 //Connect all API's 
 

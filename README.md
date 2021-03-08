@@ -2,7 +2,7 @@
 
 ## Project Name
 
-Long Day
+LongDay
 
 ## Project Description
 
@@ -92,11 +92,17 @@ set __proto__: ƒ __proto__()
 
 ## Wireframes
 
-Lofidelity Wireframe:
+Home Page:
 
-I will create a site with two buttons in the header to generate each option for user.
+I will create a site with two buttons in the header to generate each option for user. It will also have a third button in the corner to go the the page that will allow them to search by cocktail. In the header my email will be linked to a create email prompt and it will have a link to my github account.
 
-![alt text](https://res.cloudinary.com/dbmxg3su8/image/upload/v1615195009/Screen_Shot_2021-03-08_at_4.16.02_AM_sv5no3.png "Logo Title Text 1")
+![alt text](https://res.cloudinary.com/dbmxg3su8/image/upload/v1615226141/Screen_Shot_2021-03-08_at_12.54.16_PM_akg6tp.png "Home Page Wireframe")
+
+Search Page:
+
+This page will allow the user to search by cocktail.
+
+![alt text](https://res.cloudinary.com/dbmxg3su8/image/upload/v1615226140/Screen_Shot_2021-03-08_at_12.52.28_PM_opbm2i.png "Search Page Wireframe")
 
 ### MVP/PostMVP
 
@@ -108,6 +114,7 @@ I will create a site with two buttons in the header to generate each option for 
 - Implement responsive design using at least one media query/breakpoint (i.e. desktop, tablet, mobile, etc).
 - Deploy site to Github Pages.
 - Commit daily until completion.
+- Link to second HTML page
 
 #### PostMVP
 
@@ -123,15 +130,15 @@ Inline-style:
 
 | Component               | Priority | Estimated Time | Time Invested | Actual Time |
 | ----------------------- | :------: | :------------: | :-----------: | :---------: |
-| Adding Form             |    H     |      2hrs      |               |             |
-| Working with API        |    H     |      3hrs      |               |             |
-| Working with HTML       |    H     |      3hrs      |               |             |
-| Working with Javascript |    H     |     18hrs      |               |             |
-| Working with CSS        |    H     |      6hrs      |               |             |
+| Adding Form             |    H     |      3hrs      |               |             |
+| Working with API        |    H     |      5hrs      |               |             |
+| Working with HTML       |    H     |      4hrs      |               |             |
+| Working with Javascript |    H     |     20hrs      |               |             |
+| Working with CSS        |    H     |      8hrs      |               |             |
 | Debugging               |    H     |      3hrs      |               |             |
-| Editing                 |    H     |      3hrs      |               |             |
-| Testing                 |    H     |      1hrs      |               |             |
-| Total                   |    H     |      6hrs      |               |             |
+| Editing                 |    H     |      4hrs      |               |             |
+| Testing                 |    H     |      3hrs      |               |             |
+| Total                   |    H     |     50hrs      |               |             |
 
 ## Code Snippet
 

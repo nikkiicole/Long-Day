@@ -8,16 +8,19 @@ const adviceButton = document.querySelector("#Give-Me-Advice")
 const cocktailTitle = document.querySelector("#Cocktail-Name")
 const cocktailIngredients = document.querySelector("#Recipe-Card-Ingredients")
 const cocktailInstructions = document.querySelector("#Recipe-Card-Instructions")
-// const cocktailPicture = 
+const cocktailPicture = document.getElementById("Cocktail-Image")
 const cocktailButton = document.querySelector("#Give-Me-A-Drink")
 // this creates the call to the api and makes the data available for me to use while implementing a method to catch errors 
+console.log(cocktailPicture)
+
 async function getCocktails() {
   try {
     let response = await axios.get("https://www.thecocktaildb.com/api/json/v1/1/random.php");
-    console.log(response.data.drinks[0].strDrinkThumb);
+    console.log(response.data.drinks[0]);
 
     displayCocktailName(response.data.drinks[0].strDrink)
     displayRecipeCardInstructions(response.data.drinks[0].strInstructions)
+    displayCocktailImage(response.data.drinks[0].strDrinkThumb)
      // displayRecipeCardIngredients
   }catch (err) {
       console.log(err);
@@ -33,6 +36,11 @@ function displayCocktailName(cocktailName) {
 function displayRecipeCardInstructions(cocktailDirections) {
   // console.log(cocktailDirections)
   cocktailInstructions.innerText =cocktailDirections
+}
+
+function  displayCocktailImage(cocktailImage) {
+  console.log(cocktailImage)
+  cocktailPicture.src = cocktailImage
 }
 
 cocktailButton.addEventListener("click", getCocktails)

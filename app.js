@@ -1,26 +1,69 @@
 // https://www.thecocktaildb.com/api/json/v1/1/random.php
 // https://api.adviceslip.com/advice
 
+//this ATTACHES MY HTML SO I CAN ACCESS TO USE FOR JAVASCRIPT 
+const adviceSlip = document.querySelector("#Advice-Slip")
+const adviceButton = document.querySelector("#Give-Me-Advice")
 
+const cocktailTitle = document.querySelector("#Cocktail-Name")
+const cocktailIngredients
+const cocktailInstructions
+const cocktailButton = document.querySelector("#Give-Me-A-Drink")
+// this creates the call to the api and makes the data available for me to use while implementing a method to catch errors 
 async function getCocktails() {
   try {
     let response = await axios.get("https://www.thecocktaildb.com/api/json/v1/1/random.php");
-    console.log(response.data);
+    // console.log(response.data.drinks[0].strDrink);
+
+    displayCocktailName(response.data.drinks[0].strDrink)
+    // displayRecipeCardIngredients
+    // displayRecipeCardInstructions
   }catch (err) {
       console.log(err);
     }
 }
 getCocktails()
 
+function displayCocktailName(cocktailName) {
+  console.log(cocktailName)
+  cocktailTitle.innerText = cocktailName
+}
+
+cocktailButton.addEventListener("click", getCocktails)
+
+// CALLS FUNCTION TO RUN ABOVE SO DATA IS AVAILABLE 
+
+// this creates the call to the api and makes the data available for me to use while implementing a method to catch errors 
 async function getAdviceSlips() {
   try {
     let response = await axios.get("https://api.adviceslip.com/advice");
-    console.log(response.data);
+    // console.log(response.data.slip.advice);
+    //ALLOWS DISPLAYSLIP TO PULL FROM API AND PASS BELOW SO I CAN CONNECT THE HTML 
+    displaySlip(response.data.slip.advice);
+
   }catch (err) {
       console.log(err);
     }
 }
+// CALLS FUNCTION TO RUN ABOVE SO DATA IS AVAILABLE 
 getAdviceSlips()
+
+//CREATES DISPLAY SLIP FUNCTION WE RUN ADVICE THROUGH WHICH IS THE PARAMETER  I SET TO USE WITHIN THIS FUNCTION 
+function displaySlip(advice) {
+  console.log(advice)
+  adviceSlip.innerText = '"' + advice + '"'
+}
+
+adviceButton.addEventListener("click", getAdviceSlips)
+
+
+
+
+// function removeOldSlip() {
+//   while (div.firstChild) {
+//     div.removeChild(div.firstChild);
+//   }  
+// }
 
 //Connect all API's 
 

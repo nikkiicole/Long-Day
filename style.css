@@ -1,4 +1,66 @@
+header {
+  background-color: black;
+}
 
+#Logo-Container {
+  background-color: darkblue;
+}
+
+#Logo {
+  color: white;
+  font-family: "Pacifico", cursive;
+}
+#Give-Me-A-Drink {
+  background-color: #615f5f;
+  color: white;
+  font-family: "Roboto", sans-serif;
+}
+#Give-Me-Advice {
+  background-color: #615f5f;
+  color: white;
+  font-family: "Roboto", sans-serif;
+}
+#Search-Cocktails {
+  background-color: #615f5f;
+}
+a {
+  text-decoration: none;
+  color: white;
+  font-family: "Roboto", sans-serif;
+}
+
+#Intro-Container {
+  background-color: black;
+}
+
+#Intro {
+  color: white;
+  font-family: "Merriweather", serif;
+}
+
+#Recipe-Card-Container {
+  background-color: black;
+}
+
+#Cocktail-Name {
+  background-color: white;
+}
+
+#Recipe-Card-Ingredients {
+  background-color: rgb(238, 198, 198);
+}
+
+#Recipe-Card-Instructions {
+  background-color: rgb(143, 125, 125);
+}
+
+#Recipe-Card-Container a{
+
+}
+
+body {
+  background-color: #606c38;
+}
 
 /* 
 link fonts y

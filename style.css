@@ -1,11 +1,20 @@
 header {
   background-color: black;
+  /* position: fixed; */
+  flex-flow: nowrap;
 }
 
 #Logo-Container {
+  display: flex;
+  flex-flow: column nowrap;
+  justify-content: space space-between;
   background-color: darkblue;
 }
 
+/* #Button-Container{
+  display: flex;
+  flex-flow: row nowrap;
+} */
 #Logo {
   color: white;
   font-family: "Pacifico", cursive;
@@ -14,14 +23,23 @@ header {
   background-color: #615f5f;
   color: white;
   font-family: "Roboto", sans-serif;
+
+  flex-flow: column;
+  justify-content: space space-between;
 }
 #Give-Me-Advice {
   background-color: #615f5f;
   color: white;
   font-family: "Roboto", sans-serif;
+
+  flex-flow: column;
+  justify-content: space space-between;
 }
 #Search-Cocktails {
   background-color: #615f5f;
+
+  flex-flow: column;
+  justify-content: space space-between;
 }
 a {
   text-decoration: none;
@@ -54,8 +72,8 @@ a {
   background-color: rgb(143, 125, 125);
 }
 
-#Recipe-Card-Container a{
-
+#Cocktail-Image {
+  display: flex;
 }
 
 body {

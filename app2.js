@@ -1,5 +1,5 @@
 
-https://www.thecocktaildb.com/api/json/v1/1/search.php?s=Mojito
+// https://www.thecocktaildb.com/api/json/v1/1/search.php?s=Mojito
 
 async function getCocktailSearch() {
   try {

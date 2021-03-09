@@ -1,5 +1,5 @@
-https://www.thecocktaildb.com/api/json/v1/1/random.php
-https://api.adviceslip.com/advice
+// https://www.thecocktaildb.com/api/json/v1/1/random.php
+// https://api.adviceslip.com/advice
 
 
 async function getCocktails() {

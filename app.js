@@ -11,6 +11,7 @@ const cocktailIngredients = document.querySelector("#Recipe-Ingredients-Containe
 const cocktailInstructions = document.querySelector("#Recipe-Card-Instructions")
 const cocktailPicture = document.getElementById("Cocktail-Image")
 
+
 const cocktailButton = document.querySelector("#Give-Me-A-Drink")
 const bothButton = document.querySelector("#Give-Me-Both")
 // this creates the call to the api and makes the data available for me to use while implementing a method to catch errors 

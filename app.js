@@ -1,7 +1,8 @@
 // https://www.thecocktaildb.com/api/json/v1/1/random.php
 // https://api.adviceslip.com/advice
 
-//this ATTACHES MY HTML SO I CAN ACCESS TO USE FOR JAVASCRIPT 
+//THIS ATTACHES MY HTML TO THE DOM SO I CAN ACCESS TO USE FOR JAVASCRIPT 
+
 const adviceSlip = document.querySelector("#Advice-Slip")
 const adviceButton = document.querySelector("#Give-Me-Advice")
 
@@ -9,6 +10,7 @@ const cocktailTitle = document.querySelector("#Cocktail-Name")
 const cocktailIngredients = document.querySelector("#Recipe-Ingredients-Container")
 const cocktailInstructions = document.querySelector("#Recipe-Card-Instructions")
 const cocktailPicture = document.getElementById("Cocktail-Image")
+
 const cocktailButton = document.querySelector("#Give-Me-A-Drink")
 const bothButton = document.querySelector("#Give-Me-Both")
 // this creates the call to the api and makes the data available for me to use while implementing a method to catch errors 
@@ -16,7 +18,7 @@ const bothButton = document.querySelector("#Give-Me-Both")
 async function getCocktails() {
   try {
     let response = await axios.get("https://www.thecocktaildb.com/api/json/v1/1/random.php");
-    
+    //ALLOWS ME TO PULL ALL KEYS THAT INCLUDE STRMEASURE AND CREATES A NEW ARRAY OF THOSE VALUES
     let arr = []
     let obj = (response.data.drinks[0])
     for (let x in obj) {
@@ -24,12 +26,12 @@ async function getCocktails() {
         arr.push(obj[x])
       } 
     }
-
+//THIS FILTERS NULL RESULTS FROM MY MEASURES ARRAY
     const filteredMeasures = arr.filter(function (a) {
       return a != null;
     })
 
-    
+    //SAME AS ABOVE BUT FOR MY INGREDIENTS
     let arr1 = []
     let obj1 = (response.data.drinks[0])
     for (let x in obj1) {
@@ -37,26 +39,34 @@ async function getCocktails() {
         arr1.push(obj1[x])
       }
     }
-    // console.log(arr1)
+  
+    //SAME AS ABOVE WILL FILTER NULL RESULTS
     const filteredIngredients = arr1.filter(function (b) {
       return b != null;
     })
 
-
+//THIS ALLOWS FOR US TO REMOVE OLD INGREDIENTS FROM OUR PAGE
     while (cocktailIngredients.firstChild) {
     cocktailIngredients.removeChild(cocktailIngredients.firstChild)
     }
-//while there is a first child then remove the first child cocktail ingredients has to run 
+//THIS FUNCTION SAYS THAT WE ARE GOING TO LOOP FOR THE AMOUNT OF TIMES EQUAL TO LENGTH OF OUR MEASURES
     for (let i = 0; i < filteredMeasures.length; i++){
+      //CREATES OUR INGREDIENT ROW SO WE CAN PLACE OUR MEASURE VALUES AND INGREDIENT VALUES 
       const row = document.createElement("div")
-      row.classList.add("ingredientRow")
+      row.classList.add("Ingredient-Row")
+//CREATES DIV TO HOLD MEASURE & INDGREDIENT VALUES FROM API
       const measure = document.createElement("div")
       const ingredient = document.createElement("div")
+//APPENDS MEASURE AND INGREDIENT DIV TO ROW 
       row.appendChild(measure)
       row.appendChild(ingredient)
       measure.innerText = filteredMeasures[i]
       ingredient.innerText = filteredIngredients[i]
+
       cocktailIngredients.appendChild(row)
+
+      measure.setAttribute('id','Measure-ID')
+      ingredient.setAttribute('id','Ingredient-ID')
     }
 
     displayCocktailName(response.data.drinks[0].strDrink)

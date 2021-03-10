@@ -11,17 +11,44 @@ const cocktailInstructions = document.querySelector("#Recipe-Card-Instructions")
 const cocktailPicture = document.getElementById("Cocktail-Image")
 const cocktailButton = document.querySelector("#Give-Me-A-Drink")
 // this creates the call to the api and makes the data available for me to use while implementing a method to catch errors 
-console.log(cocktailPicture)
 
 async function getCocktails() {
   try {
     let response = await axios.get("https://www.thecocktaildb.com/api/json/v1/1/random.php");
-    console.log(response.data.drinks[0]);
+    
+    let arr = []
+    let obj = (response.data.drinks[0])
+    for (let x in obj) {
+      if (x.includes('strMeasure')) {
+        arr.push(obj[x])
+      } 
+    }
+    const filteredArr = arr.filter(function (a) {
+      return a != null;
+    });
+
+    console.log(filteredArr)
+
+    let arr1 = []
+    let obj1 = (response.data.drinks[0])
+    for (let x in obj1) {
+      if (x.includes('strIngredient')) {
+        arr1.push(obj1[x])
+      }
+    }
+    // console.log(arr1)
+    const filteredArr1 = arr1.filter(function (b) {
+      return b != null;
+    });
+
+    console.log(filteredArr1)
+
 
     displayCocktailName(response.data.drinks[0].strDrink)
     displayRecipeCardInstructions(response.data.drinks[0].strInstructions)
     displayCocktailImage(response.data.drinks[0].strDrinkThumb)
      // displayRecipeCardIngredients
+    
   }catch (err) {
       console.log(err);
     }
@@ -39,9 +66,10 @@ function displayRecipeCardInstructions(cocktailDirections) {
 }
 
 function  displayCocktailImage(cocktailImage) {
-  console.log(cocktailImage)
+  // console.log(cocktailImage)
   cocktailPicture.src = cocktailImage
 }
+
 
 cocktailButton.addEventListener("click", getCocktails)
 
@@ -73,11 +101,7 @@ adviceButton.addEventListener("click", getAdviceSlips)
 
 
 
-// function removeOldSlip() {
-//   while (div.firstChild) {
-//     div.removeChild(div.firstChild);
-//   }  
-// }
+
 
 //Connect all API's 
 

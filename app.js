@@ -10,7 +10,7 @@ const cocktailIngredients = document.querySelector("#Recipe-Ingredients-Containe
 const cocktailInstructions = document.querySelector("#Recipe-Card-Instructions")
 const cocktailPicture = document.getElementById("Cocktail-Image")
 const cocktailButton = document.querySelector("#Give-Me-A-Drink")
-
+const bothButton = document.querySelector("#Give-Me-Both")
 // this creates the call to the api and makes the data available for me to use while implementing a method to catch errors 
 
 async function getCocktails() {
@@ -28,13 +28,8 @@ async function getCocktails() {
     const filteredMeasures = arr.filter(function (a) {
       return a != null;
     })
-    // console.log(filteredArr)
+
     
-    filteredMeasures.forEach(function(filteredMeasureResult) {
-      console.log(filteredMeasureResult);
-    })
-
-
     let arr1 = []
     let obj1 = (response.data.drinks[0])
     for (let x in obj1) {
@@ -47,10 +42,11 @@ async function getCocktails() {
       return b != null;
     })
 
-    filteredIngredients.forEach(function(filteredResult1) {
-      console.log(filteredResult1);
-    })
 
+    while (cocktailIngredients.firstChild) {
+    cocktailIngredients.removeChild(cocktailIngredients.firstChild)
+    }
+//while there is a first child then remove the first child cocktail ingredients has to run 
     for (let i = 0; i < filteredMeasures.length; i++){
       const row = document.createElement("div")
       row.classList.add("ingredientRow")
@@ -63,15 +59,9 @@ async function getCocktails() {
       cocktailIngredients.appendChild(row)
     }
 
-    
-    // let finalArray = filteredArr.join('')
-    // console.log(finalArray)
-
     displayCocktailName(response.data.drinks[0].strDrink)
     displayRecipeCardInstructions(response.data.drinks[0].strInstructions)
     displayCocktailImage(response.data.drinks[0].strDrinkThumb)
-     // displayRecipeCardIngredients
-    
   }catch (err) {
       console.log(err);
     }
@@ -120,6 +110,11 @@ function displaySlip(advice) {
 }
 
 adviceButton.addEventListener("click", getAdviceSlips)
+
+bothButton.addEventListener("click",() => {
+getAdviceSlips();
+getCocktails();
+});
 
 
 

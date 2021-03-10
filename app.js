@@ -25,9 +25,13 @@ async function getCocktails() {
     }
     const filteredArr = arr.filter(function (a) {
       return a != null;
-    });
+    })
+    // console.log(filteredArr)
+    
+    filteredArr.forEach(function(filteredResult1) {
+      console.log(filteredResult1);
+    })
 
-    console.log(filteredArr)
 
     let arr1 = []
     let obj1 = (response.data.drinks[0])
@@ -39,10 +43,15 @@ async function getCocktails() {
     // console.log(arr1)
     const filteredArr1 = arr1.filter(function (b) {
       return b != null;
-    });
+    })
 
-    console.log(filteredArr1)
+    filteredArr1.forEach(function(filteredResult1) {
+      console.log(filteredResult1);
+    })
 
+    
+    // let finalArray = filteredArr.join('')
+    // console.log(finalArray)
 
     displayCocktailName(response.data.drinks[0].strDrink)
     displayRecipeCardInstructions(response.data.drinks[0].strInstructions)

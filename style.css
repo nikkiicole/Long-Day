@@ -64,8 +64,13 @@ a {
   background-color: white;
 }
 
-#Recipe-Card-Ingredients {
+/* #Recipe-Card-Ingredients {
   background-color: rgb(238, 198, 198);
+} */
+
+table, th, tr {
+  border: 1px solid black;
+  background-color: white
 }
 
 #Recipe-Card-Instructions {

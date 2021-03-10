@@ -60,11 +60,12 @@ async function getCocktails() {
 //APPENDS MEASURE AND INGREDIENT DIV TO ROW 
       row.appendChild(measure)
       row.appendChild(ingredient)
+      //ALLOWS THE INNERTEXT OF MEASURE & INGREDIENT TO RELECT WHAT WE HAVE IN API
       measure.innerText = filteredMeasures[i]
       ingredient.innerText = filteredIngredients[i]
-
+//APPHENDS OUR CREATED ROW WITH OUR MEASURE VALUES AND INGREDIENT VALUES TO OUT HTML CREATED COCKTAIL INGREDIENT ELEMENT
       cocktailIngredients.appendChild(row)
-
+//CREATES IDS SEPERATELY FOR MEASURE AND INGREDIENTS TO MAKE CSS MORE DYNAMIC! 
       measure.setAttribute('id','Measure-ID')
       ingredient.setAttribute('id','Ingredient-ID')
     }

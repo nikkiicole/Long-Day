@@ -2,20 +2,29 @@
 // https://www.thecocktaildb.com/api/json/v1/1/search.php?s=Mojito
 
 
-const cocktailEntered = "mojito"
+// const cocktailEntered = "mojito"
 
-const cocktailSearchBar =document.querySelector("#Cocktails-Form")
+const cocktailSearchForm =document.querySelector("#Cocktails-Form")
+
+const cocktailSearchBar =document.querySelector("#Search-Bar")
+
 const cocktailTitle = document.querySelector("#Cocktail-Name")
 const cocktailIngredients = document.querySelector("#Recipe-Card-Ingredients")
 const cocktailInstructions = document.querySelector("#Recipe-Card-Instructions")
 const cocktailPicture = document.getElementById("Cocktail-Image")
 
-console.log(cocktailSearchBar)
+
+cocktailSearchForm.addEventListener("submit", (event) => {//listening for the submit to do 
+  event.preventDefault();//allows us to delay prevent refresh
+  getCocktails(cocktailSearchBar.value);
+//just prevents the page from refresh prevents form from attempting to make a http request
+// we want to combine input value with our request to pull data 
+});
 
 // const cocktailButton = 
 // this creates the call to the api and makes the data available for me to use while implementing a method to catch errors 
 
-async function getCocktails() {
+async function getCocktails(cocktailEntered) {
   try {
     let response = await axios.get(`https://www.thecocktaildb.com/api/json/v1/1/search.php?s=${cocktailEntered}`);
     //ALLOWS ME TO PULL ALL KEYS THAT INCLUDE STRMEASURE AND CREATES A NEW ARRAY OF THOSE VALUES

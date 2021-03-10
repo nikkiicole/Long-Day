@@ -28,13 +28,17 @@
   </div>
 
  <!--Search Bar Section-->
- <form id="Cocktails-Form">
-  <input type="text" id="Search-Bar" placeholder="Search Cocktails...">
+ <form id="Cocktails-Form" role="search"> 
+  <input type="search" id="Search-Bar" name ="searchBar" placeholder="Search Cocktails..."
+  aria-label="Search through site content">
 
   <input
-        type="submit" 
-        placeholder="Get Cocktails" 
-        id="search"></input>
+  type="submit" 
+  placeholder="Get Cocktails" 
+  id="Search-Submit"></input>
+
+
+
  </form>
 
 <!-- recipe card section -->

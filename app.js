@@ -1,5 +1,3 @@
-// https://www.thecocktaildb.com/api/json/v1/1/random.php
-// https://api.adviceslip.com/advice
 
 //THIS ATTACHES MY HTML TO THE DOM SO I CAN ACCESS TO USE FOR JAVASCRIPT 
 

@@ -1,11 +1,6 @@
 
-// https://www.thecocktaildb.com/api/json/v1/1/search.php?s=Mojito
-
-
-// const cocktailEntered = "mojito"
 
 const cocktailSearchForm =document.querySelector("#Cocktails-Form")
-
 const cocktailSearchBar =document.querySelector("#Search-Bar")
 
 const cocktailTitle = document.querySelector("#Cocktail-Name")
@@ -18,10 +13,9 @@ cocktailSearchForm.addEventListener("submit", (event) => {//listening for the su
   event.preventDefault();//allows us to delay prevent refresh
   getCocktails(cocktailSearchBar.value);
 //just prevents the page from refresh prevents form from attempting to make a http request
-// we want to combine input value with our request to pull data 
+// combines search bar value with request to pull data 
 });
 
-// const cocktailButton = 
 // this creates the call to the api and makes the data available for me to use while implementing a method to catch errors 
 
 async function getCocktails(cocktailEntered) {
@@ -100,7 +94,6 @@ function displayRecipeCardInstructions(cocktailDirections) {
 function  displayCocktailImage(cocktailImage) {
   cocktailPicture.src = cocktailImage
 }
-
 
 // cocktailEntered.addEventListener("submit", getCocktails)
 

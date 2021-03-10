@@ -5,9 +5,9 @@ header {
 }
 
 #Logo-Container {
-  display: flex;
+  /* display: flex;
   flex-flow: column nowrap;
-  justify-content: space space-between;
+  justify-content: space space-between; */
   background-color: darkblue;
 }
 
@@ -23,23 +23,23 @@ header {
   background-color: #615f5f;
   color: white;
   font-family: "Roboto", sans-serif;
-
-  flex-flow: column;
-  justify-content: space space-between;
+  
+  /* flex-flow: column;
+  justify-content: space space-between; */
 }
 #Give-Me-Advice {
   background-color: #615f5f;
   color: white;
   font-family: "Roboto", sans-serif;
 
-  flex-flow: column;
-  justify-content: space space-between;
+  /* flex-flow: column;
+  justify-content: space space-between; */
 }
 #Search-Cocktails {
   background-color: #615f5f;
-
+/* 
   flex-flow: column;
-  justify-content: space space-between;
+  justify-content: space space-between; */
 }
 a {
   text-decoration: none;
@@ -68,10 +68,6 @@ a {
   background-color: rgb(238, 198, 198);
 } */
 
-table, th, tr {
-  border: 1px solid black;
-  background-color: white
-}
 
 #Recipe-Card-Instructions {
   background-color: rgb(143, 125, 125);

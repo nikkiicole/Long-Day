@@ -6,10 +6,11 @@ const adviceSlip = document.querySelector("#Advice-Slip")
 const adviceButton = document.querySelector("#Give-Me-Advice")
 
 const cocktailTitle = document.querySelector("#Cocktail-Name")
-const cocktailIngredients = document.querySelector("#Recipe-Card-Ingredients")
+const cocktailIngredients = document.querySelector("#Recipe-Ingredients-Container")
 const cocktailInstructions = document.querySelector("#Recipe-Card-Instructions")
 const cocktailPicture = document.getElementById("Cocktail-Image")
 const cocktailButton = document.querySelector("#Give-Me-A-Drink")
+
 // this creates the call to the api and makes the data available for me to use while implementing a method to catch errors 
 
 async function getCocktails() {
@@ -23,13 +24,14 @@ async function getCocktails() {
         arr.push(obj[x])
       } 
     }
-    const filteredArr = arr.filter(function (a) {
+
+    const filteredMeasures = arr.filter(function (a) {
       return a != null;
     })
     // console.log(filteredArr)
     
-    filteredArr.forEach(function(filteredResult1) {
-      console.log(filteredResult1);
+    filteredMeasures.forEach(function(filteredMeasureResult) {
+      console.log(filteredMeasureResult);
     })
 
 
@@ -41,13 +43,25 @@ async function getCocktails() {
       }
     }
     // console.log(arr1)
-    const filteredArr1 = arr1.filter(function (b) {
+    const filteredIngredients = arr1.filter(function (b) {
       return b != null;
     })
 
-    filteredArr1.forEach(function(filteredResult1) {
+    filteredIngredients.forEach(function(filteredResult1) {
       console.log(filteredResult1);
     })
+
+    for (let i = 0; i < filteredMeasures.length; i++){
+      const row = document.createElement("div")
+      row.classList.add("ingredientRow")
+      const measure = document.createElement("div")
+      const ingredient = document.createElement("div")
+      row.appendChild(measure)
+      row.appendChild(ingredient)
+      measure.innerText = filteredMeasures[i]
+      ingredient.innerText = filteredIngredients[i]
+      cocktailIngredients.appendChild(row)
+    }
 
     
     // let finalArray = filteredArr.join('')

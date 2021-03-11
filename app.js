@@ -48,7 +48,6 @@ async function getCocktails() {
     while (cocktailIngredients.firstChild) {
     cocktailIngredients.removeChild(cocktailIngredients.firstChild)
     }
-    const spaceFunction= ""
 //THIS FUNCTION SAYS THAT WE ARE GOING TO LOOP FOR THE AMOUNT OF TIMES EQUAL TO LENGTH OF OUR MEASURES
     for (let i = 0; i < filteredMeasures.length; i++){
       //CREATES OUR INGREDIENT ROW SO WE CAN PLACE OUR MEASURE VALUES AND INGREDIENT VALUES 
@@ -56,15 +55,12 @@ async function getCocktails() {
       row.classList.add("Ingredient-Row")
 //CREATES DIV TO HOLD MEASURE & INDGREDIENT VALUES FROM API
       const measure = document.createElement("div")
-      const spacer = document.createElement("div")
       const ingredient = document.createElement("div")
 //APPENDS MEASURE AND INGREDIENT DIV TO ROW 
       row.appendChild(measure)
-      row.appendChild(spacer)
       row.appendChild(ingredient)
       //ALLOWS THE INNERTEXT OF MEASURE & INGREDIENT TO RELECT WHAT WE HAVE IN API
       measure.innerText = filteredMeasures[i]
-      spacer.innerText = spaceFunction
       ingredient.innerText = filteredIngredients[i]
 //APPHENDS OUR CREATED ROW WITH OUR MEASURE VALUES AND INGREDIENT VALUES TO OUT HTML CREATED COCKTAIL INGREDIENT ELEMENT
       cocktailIngredients.appendChild(row)

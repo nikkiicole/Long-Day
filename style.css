@@ -250,6 +250,7 @@ a {
   order: 0;
   flex: 0 1 auto;
   align-self: center;
+  width: 100%;
 }
 
 .Ingredient-Row {
@@ -336,7 +337,7 @@ font-family: "Roboto", sans-serif;
 @media screen and (max-width: 1090px){
   
     #Recipe-Card-Container{
-      margin:5px;
+      margin:10px;
       width: 100%;
     }
     #Cocktail-Image {
@@ -382,8 +383,30 @@ font-family: "Roboto", sans-serif;
     #Logo {
       font-size: 40px
       }
+      #Cocktail-Name {
+      font-size: 25px;}
+      #Recipe-Ingredients-Container {
+        font-size: 18px;}
+        #Recipe-Card-Instructions{
+          font-size: 18px;}
   }
 
+  @media screen and (min-width: 1400px){
+
+    #Recipe-Card-Container{
+      left:150px;
+      right:150px;
+    }
+    #Cocktail-Name{
+      font-size: 40px;}
+
+    #Recipe-Ingredients-Container {
+      font-size: 30px;}
+    #Recipe-Card-Instructions{
+      font-size: 30px;}
+  
+
+  } 
 
 /* 
 link fonts y

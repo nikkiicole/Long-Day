@@ -373,7 +373,6 @@ margin-top: 5px;
     margin-bottom: 40px;
     margin-left: 0px;
     font-size: 15px;
-
   }
   #Search-Submit {
     width: 25%;
@@ -382,7 +381,7 @@ margin-top: 5px;
   #Logo {
     font-size: 30px;
     }
-    #Home{
+  #Home{
       font-size: 12px;
       margin: 3px;
       border-radius: 20px;
@@ -392,14 +391,13 @@ margin-top: 5px;
     
 
   #Recipe-Card-Container{
-  /* margin-left: 0px; */
-  /* margin-right: 0px; */
+  
   width: 100%;
   margin-bottom: 50px;
   }
   #Cocktail-Name{
     font-size: 20px;
-  /* width: 100%;} */
+  
   }
   #Recipe-Card-Ingredients {
     font-size: 13px;

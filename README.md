@@ -130,25 +130,43 @@ Inline-style:
 
 | Component                            | Priority | Estimated Time | Time Invested | Actual Time |
 | ------------------------------------ | :------: | :------------: | :-----------: | :---------: |
-| Adding Form                          |    H     |      3hrs      |               |             |
-| Working with API                     |    H     |      5hrs      |               |             |
-| Working with HTML                    |    H     |      4hrs      |               |             |
-| Setting up Javascript frame          |    H     |      2hrs      |               |
-| Appending items to the DOM           |    H     |      3hrs      |               |
-| Creating Functions                   |    H     |     3.5hrs     |               |
-| Organizing Loop Flow                 |    H     |      3hrs      |               |
-| Linking Second HTML Page             |    H     |     .5hrs      |
-| Linking Images                       |    H     |     1.5hrs     |
-| Creating items to be appended to DOM |    H     |      3hrs      |
-| Working with CSS Format              |    H     |      3hrs      |               |
-| Polishing Design                     |    M     |      3hrs      |               |             |
-| Debugging                            |    H     |      3hrs      |               |             |
-| Cleaning Code & Refactoring          |    M     |      4hrs      |               |             |
-| Testing                              |    H     |      3hrs      |               |             |
-| Total                                |    H     |    44.5hrs     |               |             |
+| Adding Form                          |    H     |      3hrs      |     3hrs      |    3hrs     |
+| Working with API                     |    H     |      5hrs      |     6hrs      |    6hrs     |
+| Working with HTML                    |    H     |      4hrs      |     3hrs      |    3hrs     |
+| Setting up Javascript frame          |    H     |      2hrs      |     3hrs      |    3hrs     |
+| Appending items to the DOM           |    H     |      3hrs      |     3hrs      |    3hrs     |
+| Creating Functions                   |    H     |     3.5hrs     |     4hrs      |    4hrs     |
+| Organizing Loop Flow                 |    H     |      3hrs      |     3hrs      |    3hrs     |
+| Linking Second HTML Page             |    H     |     .5hrs      |     .5hrs     |    .5hrs    |
+| Linking Images                       |    H     |     1.5hrs     |     1hrs      |    1hrs     |
+| Creating items to be appended to DOM |    H     |      3hrs      |     3hrs      |    3hrs     |
+| Working with CSS Format              |    H     |      3hrs      |     5hrs      |    5hrs     |
+| Polishing Design                     |    M     |      3hrs      |     5hrs      |    5hrs     |
+| Debugging                            |    H     |      3hrs      |     3hrs      |    3hrs     |
+| Cleaning Code & Refactoring          |    M     |      4hrs      |     2hrs      |    2hrs     |
+| Testing                              |    H     |      3hrs      |     1hrs      |    1hrs     |
+| Total                                |    H     |    44.5hrs     |     45.5      |    45.5     |
 
 ## Code Snippet
+
+````JSON
+    for (let i = 0; i < filteredMeasures.length; i++){
+      const row = document.createElement("div")
+      row.classList.add("Ingredient-Row")
+      const measure = document.createElement("div")
+      const ingredient = document.createElement("div")
+      row.appendChild(measure)
+      row.appendChild(ingredient)
+      measure.innerText = filteredMeasures[i]
+      ingredient.innerText = filteredIngredients[i]
+      cocktailIngredients.appendChild(row)
+      measure.classList.add("Measure-ID")
+       ingredient.classList.add("Ingredient")
+       ```
 
 ## Change Log
 
 1.  Project Started: March 3rd, 2021.
+2.  Added Fourth Button: March 9th, 2021
+3.  Removed Open On New Page Feature: March 11th, 2021
+````

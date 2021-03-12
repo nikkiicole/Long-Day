@@ -65,8 +65,8 @@ async function getCocktails() {
 //APPHENDS OUR CREATED ROW WITH OUR MEASURE VALUES AND INGREDIENT VALUES TO OUT HTML CREATED COCKTAIL INGREDIENT ELEMENT
       cocktailIngredients.appendChild(row)
 //CREATES IDS SEPERATELY FOR MEASURE AND INGREDIENTS TO MAKE CSS MORE DYNAMIC! 
-      measure.setAttribute('id','Measure-ID')
-      ingredient.setAttribute('id','Ingredient-ID')
+      measure.classList.add("Measure-ID")
+      ingredient.classList.add("Ingredient")
     }
 //ALLOWS US TO PASS API INFO TO EACH RESPECTIVE FUNCTION ALLOWING US TO DISPLAY VALUES AND POST TO OUR HTML ELEMENTS
     displayCocktailName(response.data.drinks[0].strDrink)
@@ -98,6 +98,7 @@ async function getAdviceSlips() {
   try {
     let response = await axios.get("https://api.adviceslip.com/advice");
     //ALLOWS DISPLAYSLIP TO PULL FROM API AND PASS BELOW SO I CAN CONNECT THE HTML 
+    console.log(response.data)
     displaySlip(response.data.slip.advice);
 
   }catch (err) {
@@ -106,6 +107,7 @@ async function getAdviceSlips() {
 }
 // CALLS FUNCTION TO RUN ABOVE SO DATA IS AVAILABLE 
 getAdviceSlips()
+
 
 //CREATES DISPLAY SLIP FUNCTION WE RUN ADVICE THROUGH WHICH IS THE PARAMETER  I SET TO USE WITHIN THIS FUNCTION 
 function displaySlip(advice) {

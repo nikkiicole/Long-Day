@@ -48,7 +48,7 @@ header {
   display: inline-block;
   cursor: pointer;
   color: #ffffff;
-  font-family: "Roboto", sans-serif;
+  font-family: 'Montserrat', sans-serif;
   font-size: 20px;
   font-weight: bold;
   padding: 11px 12px;
@@ -73,7 +73,7 @@ header {
 a {
   text-decoration: none;
   color: white;
-  font-family: "Roboto", sans-serif;
+  font-family: 'Montserrat', sans-serif;
 }
 
 #Intro-Container {
@@ -94,6 +94,7 @@ a {
   height: 50px;
   margin-left: 90px;
   font-size: 20px;
+  outline: none;
 }
 #Search-Submit {
   width: 10%;
@@ -146,8 +147,8 @@ body {
 /* change font size if mobile */
 #Cocktail-Name {
   color: white;
-  font-family: "Roboto", sans-serif;
-  font-size: 30px;
+  font-family: 'Montserrat', sans-serif;
+  font-size: 35px;
   order: 0;
   flex: 0 1 auto;
   align-self: center;
@@ -155,7 +156,7 @@ body {
 
 #Recipe-Card-Ingredients {
   color: white;
-  font-family: "Roboto", sans-serif;
+  font-family: 'Montserrat', sans-serif;
   font-size: 20px;
   order: 0;
   flex: 0 1 auto;
@@ -164,11 +165,11 @@ body {
 
 #Recipe-Card-Instructions {
   color: white;
-  font-family: "Roboto", sans-serif;
+  font-family: 'Montserrat', sans-serif;
   font-size: 20px;
   order: 0;
   flex: 0 1 auto;
-  align-self: stretch;
+  align-self: center;
 }
 
 #Cocktail-Image {
@@ -187,13 +188,8 @@ body {
   align-items: center;
 }
 
-#measure-ID {
-  width: 200px;
-  text-align: right;
-  margin-right: 20px;
-}
 
-#ingredient-ID {
+.Measure-ID {
   width: 200px;
   text-align: right;
   margin-right: 20px;
@@ -222,7 +218,7 @@ footer {
   align-self: auto;
   font-size: 20px;
 
-  font-family: "Roboto", sans-serif;
+  font-family: 'Montserrat', sans-serif;
 }
 
 #Git-Footer {
@@ -277,7 +273,7 @@ footer {
   }
 
   #Search-Bar {
-    width: 500px;
+    width: 75%;
     margin-bottom: 40px;
   }
 }
@@ -298,9 +294,11 @@ footer {
   #Search-Cocktails {
     font-size: 10px;
   }
-
+  #Cocktails-Form{
+  margin-right: 0px;
+  }
   #Logo {
-    font-size: 40px;
+    font-size: 30px;
   }
 
   #Cocktail-Name {
@@ -322,13 +320,16 @@ footer {
     margin-left: 0px;
   }
   #Search-Bar {
-    width: 300px;
+    width: 70%;
+    margin-left: 0px;
     margin-bottom: 40px;
     font-size: 15px;
+    padding-right: 18px;
   }
   #Search-Submit {
-    width: 60px;
+    width: 25%;
     font-size: 15px;
+    margin-right: 0px;
   }
 }
 
@@ -349,6 +350,115 @@ footer {
     font-size: 25px;
   }
 }
+
+@media screen and (max-width: 490px){
+    
+
+  header {
+    height: 600px;
+  }
+  #Intro{
+    font-size: 20px;
+    margin-bottom: 5px;
+
+  }
+
+#Button-Container{
+margin-top: 5px;
+}
+
+
+  #Search-Bar {
+    width: 70%;
+    margin-bottom: 40px;
+    margin-left: 0px;
+    font-size: 15px;
+
+  }
+  #Search-Submit {
+    width: 25%;
+    font-size: 15px;
+  }
+  #Logo {
+    font-size: 30px;
+    }
+    #Home{
+      font-size: 12px;
+      margin: 3px;
+      border-radius: 20px;
+      width: 100px;
+      height:100%
+    }
+    
+
+  #Recipe-Card-Container{
+  /* margin-left: 0px; */
+  /* margin-right: 0px; */
+  width: 100%;
+  margin-bottom: 50px;
+  }
+  #Cocktail-Name{
+    font-size: 20px;
+  /* width: 100%;} */
+  }
+  #Recipe-Card-Ingredients {
+    font-size: 13px;
+  width: 100%;
+  
+  }
+
+  #Recipe-Card-Items-Container{
+  /* width: 100%; */
+  }
+
+  #Recipe-Card-Instructions{
+    font-size: 13px;
+  /* width: 100%; */
+  }
+
+
+  #Cocktail-Image {
+    /* display:none; */
+  }
+
+footer{
+background-color: black;
+display: flex;
+flex-direction: row;
+flex-wrap: nowrap;
+justify-content: center;
+align-content: stretch;
+align-items: center;
+right: 0px;
+left: 0px;
+bottom: 0px;
+width: 100%;
+margin-bottom: 0px;
+margin-top: 10px;
+/* height: 100%; */
+}
+#Me{
+  color: white;
+  order: 0;
+  flex: 0 1 auto;
+  align-self: auto;
+  font-size: 12px;
+  font-family: 'Montserrat', sans-serif;
+  }
+  
+  #Git-Footer{
+    order: 0;
+    flex: 0 1 auto;
+    align-self: auto;
+    }
+  #Email{
+    order: 0;
+    flex: 0 1 auto;
+    align-self: auto;
+    font-size: 12px;
+  }
+}    
+
 
 /* link all pages 
 

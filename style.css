@@ -48,7 +48,7 @@ header {
   display: inline-block;
   cursor: pointer;
   color: #ffffff;
-  font-family: "Roboto", sans-serif;
+  font-family: 'Montserrat', sans-serif;
   font-size: 15px;
   font-weight: bold;
   padding: 11px 12px;
@@ -78,7 +78,7 @@ header {
   display: inline-block;
   cursor: pointer;
   color: #ffffff;
-  font-family: "Roboto", sans-serif;
+  font-family: 'Montserrat', sans-serif;
   font-size: 15px;
   font-weight: bold;
   padding: 11px 12px;
@@ -108,7 +108,7 @@ header {
   display: inline-block;
   cursor: pointer;
   color: #ffffff;
-  font-family: "Roboto", sans-serif;
+  font-family: 'Montserrat', sans-serif;
   font-size: 15px;
   font-weight: bold;
   padding: 11px 12px;
@@ -138,8 +138,8 @@ header {
   display: inline-block;
   cursor: pointer;
   color: #ffffff;
-  font-family: "Roboto", sans-serif;
-  font-size: 15px;
+  font-family: 'Montserrat', sans-serif;
+  font-size: 16px;
   font-weight: bold;
   padding: 11px 12px;
   text-decoration: none;
@@ -163,7 +163,7 @@ header {
 a {
   text-decoration: none;
   color: white;
-  font-family: "Roboto", sans-serif;
+  font-family: 'Montserrat', sans-serif;
 }
 
 #Intro-Container {
@@ -193,6 +193,7 @@ a {
   margin-left: 80px;
   height: 100%;
   
+  
 }
 
 #Recipe-Card-Items-Container {
@@ -217,11 +218,12 @@ a {
   align-content: center;
   align-items: center;
   /* /* max-height: 600px; */
+  /* width: 500px; */
 } 
 /* change font size if mobile */
 #Cocktail-Name {
   color: white;
-  font-family: "Roboto", sans-serif;
+  font-family: 'Montserrat', sans-serif;
   font-size: 30px;
   order: 0;
   flex: 0 1 auto;
@@ -230,7 +232,7 @@ a {
 
 #Recipe-Ingredients-Container {
   color: white;
-  font-family: "Roboto", sans-serif;
+  font-family: 'Montserrat', sans-serif;
   font-size: 20px;
   order: 0;
   flex: 0 1 auto;
@@ -239,7 +241,7 @@ a {
 
 #Recipe-Card-Instructions {
   color: white;
-  font-family: "Roboto", sans-serif;
+  font-family: 'Montserrat', sans-serif;
   font-size: 20px;
   order: 0;
   flex: 0 1 auto;
@@ -251,6 +253,7 @@ a {
   flex: 0 1 auto;
   align-self: center;
   width: 100%;
+/* object-fit:cover ; */
 }
 
 .Ingredient-Row {
@@ -262,14 +265,10 @@ a {
   align-items: center;
 }
 
-#measure-ID {
-  width: 200px;
-  text-align: right;
-  margin-right: 20px;
-}
 
-#ingredient-ID {
-  width: 200px;
+
+.Measure-ID {
+  width: 49%;
   text-align: right;
   margin-right: 20px;
 
@@ -283,13 +282,13 @@ body {
 }
 
 #Advice-Card-Container{
-  margin-top: 60px;
+  margin-top: 40px;
   text-align: center;
   margin-bottom: 40px;
   background-color: black;
   margin-left: 80px;
   margin-right: 80px;
-  height: 120px;
+  height: 140px;
   padding-top: 18px;
 }
 #Advice-Slip{
@@ -323,7 +322,7 @@ flex: 0 1 auto;
 align-self: auto;
 font-size: 20px;
 
-font-family: "Roboto", sans-serif;
+font-family: 'Montserrat', sans-serif;
 }
 
 #Git-Footer{
@@ -341,7 +340,7 @@ font-family: "Roboto", sans-serif;
 @media screen and (max-width: 1090px){
   
     #Recipe-Card-Container{
-      margin:10px;
+      margin:20px;
       width: 100%;
     }
     #Cocktail-Image {
@@ -385,18 +384,28 @@ font-family: "Roboto", sans-serif;
       font-size: 10px;
     } 
     #Logo {
-      font-size: 40px
+      font-size: 30px
       }
       #Cocktail-Name {
       font-size: 25px;}
       #Recipe-Ingredients-Container {
-        font-size: 18px;}
+        font-size: 18px;
+      
+      
+      }
+      #Intro{
+        font-size: 20px;
+      }
         #Recipe-Card-Instructions{
           font-size: 18px;}
 
           #Advice-Card-Container{
             padding-top: 0px;
   }
+  #Advice-Slip{
+    font-size: 20px;
+  }
+}
 
   @media screen and (min-width: 1400px){
 
@@ -414,6 +423,117 @@ font-family: "Roboto", sans-serif;
   
 
   } 
+  @media screen and (max-width: 490px){
+    
+
+    header {
+      height: 600px;
+    }
+    #Intro{
+      font-size: 20px;
+
+    }
+
+    #Logo {
+      font-size: 25px;
+      }
+      #Give-Me-A-Drink{
+        font-size: 10px;
+        margin: 3px;
+        border-radius: 40px;
+        width: 55px;
+        height:100%
+      }
+      #Give-Me-Advice{
+        font-size: 10px;
+        margin: 3px;
+        border-radius: 40px;
+        width: 55px;
+        height:100%
+      } 
+      #Give-Me-Both{
+        font-size: 10px;
+        margin: 3px;
+        border-radius: 30px;
+        width: 55px;
+        height:100%
+      } 
+      #Search-Cocktails{
+        font-size: 10px;
+        margin: 3px;
+        border-radius: 5px;
+        width: 58px;
+        height:100%
+
+       }
+
+
+    #Recipe-Card-Container{
+    margin-left: 0px;
+    margin-bottom: 10px;
+    }
+    #Cocktail-Name{
+      font-size: 20px;}
+
+    #Recipe-Ingredients-Container {
+      font-size: 13px;
+    width: 100%;
+    
+    }
+
+    #Recipe-Card-Instructions{
+      font-size: 13px;}
+
+      #Advice-Card-Container{
+        background-color: #606c38;
+        margin-bottom: 5px;
+}
+#Cocktail-Image {
+  width: 100px;
+  height:100px;
+}
+
+
+footer{
+  background-color: black;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  justify-content: center;
+  align-content: stretch;
+  align-items: center;
+  right: 0px;
+  left: 0px;
+  bottom: 0px;
+  width: 100%;
+  margin-bottom: 0px;
+  margin-top: 10px;
+  /* height: 100%; */
+}
+  #Me{
+    color: white;
+    order: 0;
+    flex: 0 1 auto;
+    align-self: auto;
+    font-size: 12px;
+    font-family: 'Montserrat', sans-serif;
+    }
+    
+    #Git-Footer{
+      order: 0;
+      flex: 0 1 auto;
+      align-self: auto;
+      }
+    #Email{
+      order: 0;
+      flex: 0 1 auto;
+      align-self: auto;
+      font-size: 12px;
+    }
+  }    
+  
+
+
 
 /* 
 link fonts y

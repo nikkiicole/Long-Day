@@ -69,8 +69,8 @@ async function getCocktails(cocktailEntered) {
 //APPHENDS OUR CREATED ROW WITH OUR MEASURE VALUES AND INGREDIENT VALUES TO OUT HTML CREATED COCKTAIL INGREDIENT ELEMENT
       cocktailIngredients.appendChild(row)
 //CREATES IDS SEPERATELY FOR MEASURE AND INGREDIENTS TO MAKE CSS MORE DYNAMIC! 
-      measure.setAttribute('id','Measure-ID')
-      ingredient.setAttribute('id','Ingredient-ID')
+       measure.classList.add("Measure-ID")
+       ingredient.classList.add("Ingredient")
     }
 //ALLOWS US TO PASS API INFO TO EACH RESPECTIVE FUNCTION ALLOWING US TO DISPLAY VALUES AND POST TO OUR HTML ELEMENTS
     displayCocktailName(response.data.drinks[0].strDrink)

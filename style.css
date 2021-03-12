@@ -438,20 +438,20 @@ font-family: 'Montserrat', sans-serif;
     }
 
     #Logo {
-      font-size: 28px;
+      font-size: 30px;
       }
       #Give-Me-A-Drink{
         font-size: 10px;
         margin: 3px;
         border-radius: 5px;
-        width: 55px;
+        width: 60px;
         height:100%
       }
       #Give-Me-Advice{
         font-size: 10px;
         margin: 3px;
         border-radius: 5px;
-        width: 55px;
+        width: 60px;
         height:100%
       } 
       #Give-Me-Both{
@@ -507,7 +507,7 @@ footer{
   bottom: 0px;
   width: 100%;
   margin-bottom: 0px;
-  margin-top: 100px;
+  margin-top: 50px;
   /* height: 100%; */
 }
   #Me{

@@ -57,18 +57,18 @@ async function getCocktails(cocktailEntered) {
       //CREATES OUR INGREDIENT ROW SO WE CAN PLACE OUR MEASURE VALUES AND INGREDIENT VALUES 
       const row = document.createElement("div")
       row.classList.add("Ingredient-Row")
-//CREATES DIV TO HOLD MEASURE & INDGREDIENT VALUES FROM API
+//CREATES DIV TO HOLD MEASURE & INGREDIENT VALUES FROM API
       const measure = document.createElement("div")
       const ingredient = document.createElement("div")
 //APPENDS MEASURE AND INGREDIENT DIV TO ROW 
       row.appendChild(measure)
       row.appendChild(ingredient)
-      //ALLOWS THE INNERTEXT OF MEASURE & INGREDIENT TO RELECT WHAT WE HAVE IN API
+      //ALLOWS THE INNERTEXT OF MEASURE & INGREDIENT TO REFLECT WHAT WE HAVE IN API
       measure.innerText = filteredMeasures[i]
       ingredient.innerText = filteredIngredients[i]
 //APPENDS OUR CREATED ROW WITH OUR MEASURE VALUES AND INGREDIENT VALUES TO OUT HTML CREATED COCKTAIL INGREDIENT ELEMENT
       cocktailIngredients.appendChild(row)
-//CREATES IDS SEPERATELY FOR MEASURE AND INGREDIENTS TO MAKE CSS MORE DYNAMIC! 
+//CREATES IDS SEPARATELY FOR MEASURE AND INGREDIENTS TO MAKE CSS MORE DYNAMIC! 
        measure.classList.add("Measure-ID")
        ingredient.classList.add("Ingredient")
     }
